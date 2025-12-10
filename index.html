@@ -7,10 +7,15 @@
 	<title>Open App</title>
 </head>
 <body>
+
+<p>Scheme URL: <span id="schemeDisplay"></span></p>
 <button id="openApp">Open App</button>
 <script>
 	const schemeUrl = "myfuturejob://"; // Replace with your custom scheme
 	const fallbackUrl = "https://apps.apple.com/app/id6739038280"; // Replace with your App Store URL
+
+	// Display the scheme URL on the page
+	document.getElementById('schemeDisplay').textContent = schemeUrl;
 
 	document.getElementById('openApp').addEventListener('click', function() {
 		const start = Date.now();
